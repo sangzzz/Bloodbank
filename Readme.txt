@@ -11,6 +11,6 @@ Heroku link:- https://lit-temple-61443.herokuapp.com
 
 Sample Users:
 Admin Access: 	Username: sangeeth@mail.com, 	Password: 1245
-			          Username: jaks@mail.com,		  Password: 1245
-Donor Access:	  Username: sang@ee.th,		      Password: 1245
-Patient Access:	Username:	jaks@email.in,		  Password: 1245 
+			Username: jaks@mail.com,		Password: 1245
+Donor Access:	Username: sang@ee.th,		Password: 1245
+Patient Access:	Username:	jaks@email.in,		Password: 1245 
