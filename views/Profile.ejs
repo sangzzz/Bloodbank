@@ -1,0 +1,154 @@
+<%- include("partials/Header.ejs") %>
+<section id="login-register-title">
+  <div class="container-fluid login-register">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/">
+        <h1><i class="fas fa-tint"></i>Blood +</h1>
+      </a>
+    </nav>
+
+    <!-- Login form -->
+  </div>
+</section>
+
+<section>
+  <div
+    class="container-fluid login-register-form"
+    style="
+      background-color: #fff;
+      background-image: url(https://www.transparenttextures.com/patterns/ag-square.png);
+    "
+  >
+    <form action="/loggedin" method="POST">
+      <div
+        id="login-form"
+        class="card login-register-form"
+        style="width: 18rem;"
+      >
+        <div class="card-body login-register-form">
+          <h5 class="card-title"><u>Set Up Your Profile</u></h5>
+          <br />
+          <p class="radio-input-title">Are you a patient or a donor:</p>
+          <p class="radio-input">
+            <label class="card-text" for="patient">Patient:</label>
+            <input
+              type="radio"
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="card-text"
+              name="usertype"
+              required
+              value="patient"
+            />
+            &emsp;
+            <input type="hidden" class="radio-input-spacing" />
+            <label class="card-text" for="donor">Donor:</label>
+            <input
+              required
+              type="radio"
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="card-text"
+              name="usertype"
+              value="donor"
+            />
+          </p>
+          <p>
+            <label class="profile-input-label card-text" for="fname"
+              >First Name :
+            </label>
+            <input
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="login-input-profile card-text"
+              type="text"
+              placeholder="Enter text"
+              name="fname"
+              required
+            />
+          </p>
+          <p>
+            <label class="profile-input-label card-text" for="lname"
+              >Last Name :
+            </label>
+            <input
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="login-input-profile card-text"
+              type="text"
+              placeholder="Enter text"
+              name="lname"
+              required
+            />
+          </p>
+          <p>
+            <label class="profile-input-label card-text" for="dob"
+              >DOB :
+            </label>
+            &emsp;&emsp;&emsp13;
+            <input
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="login-input-profile card-text"
+              type="date"
+              placeholder="Enter date"
+              name="dob"
+              required
+            />
+          </p>
+          <p>
+            <label class="profile-input-label card-text" for="bloodtype"
+              >BloodType :
+            </label>
+
+            <select
+              class="login-input-profile card-text"
+              name="bloodtype"
+              autocomplete="off"
+              required
+            >
+              <option value="" disabled selected
+                >Select your blood type.</option
+              >
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+          </p>
+          <p>
+            <label class="profile-input-label card-text" for="country"
+              >Country :
+            </label>
+            &emsp;
+            <select
+              class="login-input-profile card-text"
+              name="country"
+              autocomplete="off"
+              required
+            >
+              <option value="" disabled selected>Select Location</option>
+              <option value="California">California</option>
+              <option value="Florida">Florida</option>
+              <option value="Illinois">Illinois</option>
+              <option value="New York">New York</option>
+              <option value="Texas">Texas</option>
+            </select>
+          </p>
+          <p>
+            <button class="card-text btn btn-primary" type="submit">
+              Submit
+            </button>
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include("partials/Footer.ejs") %>

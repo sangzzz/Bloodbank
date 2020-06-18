@@ -1,0 +1,252 @@
+/* title */
+/*Elements*/
+body {
+  font-family: "Nunito";
+}
+
+i {
+  width: 30px;
+}
+
+form {
+  display: inline;
+}
+
+/*Classes*/
+.container-fluid {
+  padding: 3% 10% 6%;
+}
+
+.navbar {
+  padding-bottom: 4%;
+  /* padding-bottom: ; */
+}
+
+.navbar-brand {
+  font-family: "ubuntu";
+  font-size: 1.5rem;
+}
+
+.nav-item {
+  font-family: "Nunito";
+  font-size: 1.2rem;
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+.download-btn {
+  margin: 7% 6% 5% 0;
+}
+
+/*IDs*/
+#title {
+  background-color: #ff4c68;
+  color: #fff;
+  /* height: 125px; */
+}
+
+#heading {
+  font-family: "Montserrat";
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+#carousel img {
+  width: 100%;
+  transform: rotate(20deg);
+}
+
+#iphone {
+  width: 60%;
+  padding-left: 50px;
+  transform: rotate(25deg);
+  position: absolute;
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  #title {
+    text-align: center;
+  }
+
+  #heading {
+    font-size: 2.5rem;
+  }
+
+  #iphone {
+    position: static;
+    transform: rotate(0);
+    text-align: center;
+  }
+}
+
+/* Features */
+/* Elements */
+/* Classes */
+.feature-icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.feature-icon:hover {
+  color: #ff4c68;
+}
+
+.feature-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.feature-desc {
+  color: #8f8f8f;
+}
+
+.feature-item {
+  text-align: center;
+}
+
+/* Ids */
+#features {
+  /* z-index: 1; */
+  position: relative;
+  background-color: #fff;
+}
+
+/* Testimonials */
+/* Elements */
+/* Classes */
+.testimonial-image {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+.testimonial-text {
+  font-size: large;
+}
+
+/* Ids */
+#testimonials {
+  text-align: center;
+  background-color: #ef8172;
+  color: #fff;
+  font-family: "Nunito";
+  font-weight: bold;
+}
+
+/* footer */
+/* Elements */
+/* Classes */
+.footer-icon {
+  padding: 0 10px 0;
+}
+
+.footer-text {
+  color: #8f8f8f;
+}
+
+/* Ids */
+#footer {
+  padding: 4% 16% 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.login-register {
+  position: relative;
+  width: 35%;
+  padding: 3% auto 2%;
+  text-align: center;
+}
+
+#login-register-title {
+  height: 125px;
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+#login-form {
+  display: inline;
+  text-align: center;
+  position: relative;
+  padding: 7% auto 10%;
+  border-radius: 4px;
+  margin: 60px auto 30px;
+  background-color: #fff;
+}
+
+.login-input {
+  padding-top: 10px;
+  width: 400px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.card-title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: x-large;
+}
+button.card-text {
+  width: 400px;
+  font-size: larger;
+}
+
+.register-link {
+  position: absolute;
+  font-size: medium;
+  display: inline;
+  text-align: center;
+}
+
+.login-register-form {
+  padding-bottom: 0;
+}
+
+form .card {
+  padding-bottom: 0%;
+}
+
+.radio-input-title {
+  display: block;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 155px;
+}
+
+.radio-input {
+  padding-right: 240px;
+}
+
+.login-input-profile {
+  padding-top: 10px;
+  width: 310px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.profile-input-label {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-display {
+  font-size: larger;
+  /* width: 50%; */
+}
+.container {
+  font-size: large;
+  position: relative;
+}
+
+.patient-profile {
+  width: 50%;
+  padding-left: 9%;
+}
+
+.donate-style {
+  width: 60%;
+  padding-left: 8%;
+}

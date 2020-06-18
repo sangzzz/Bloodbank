@@ -1,0 +1,132 @@
+<%- include("partials/Header.ejs") %>
+
+<section id="login-register-title">
+  <div class="container-fluid login-register">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/">
+        <h1><i class="fas fa-tint"></i>Blood +</h1>
+      </a>
+    </nav>
+
+    <!-- Login form -->
+  </div>
+</section>
+
+<section>
+  <div
+    class="container-fluid login-register-form"
+    style="
+      background-color: #fff;
+      background-image: url(https://www.transparenttextures.com/patterns/ag-square.png);
+    "
+  >
+    <form action="/addcamp" method="POST">
+      <div
+        id="login-form"
+        class="card login-register-form"
+        style="width: 18rem;"
+      >
+        <div
+          class="card-body login-register-form container donate-style"
+          style="text-align: left;"
+        >
+          <h5
+            class="card-title"
+            style="text-align: center; padding-right: 15%;"
+          >
+            <u>ADD DONATION CAMP</u>
+          </h5>
+          <br />
+          <p>
+            <label
+              class="profile-input-label card-text"
+              style="font-size: large;"
+              for="campid"
+              >Camp ID :
+            </label>
+            &emsp;&emsp;
+            <input
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="card-text"
+              type="number"
+              placeholder=""
+              name="campid"
+              required
+              style="width: 400px;"
+            />
+          </p>
+
+          <p>
+            <label
+              class="profile-input-label card-text"
+              style="font-size: large;"
+              for="campdate"
+              >Camp Date :
+            </label>
+            &emsp;&emsp;
+            <input
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="card-text"
+              type="date"
+              placeholder=""
+              name="campdate"
+              required
+              style="width: 400px;"
+            />
+          </p>
+          <p>
+            <label
+              class="profile-input-label card-text"
+              style="font-size: large;"
+              for="no"
+              >Number of Donors : </label
+            >&emsp;&emsp13;
+            <input
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="card-text"
+              type="number"
+              placeholder=""
+              name="no"
+              required
+              style="width: 400px;"
+            />
+          </p>
+          <p>
+            <label
+              class="profile-input-label card-text"
+              style="font-size: large;"
+              for="location"
+              >Location :
+            </label>
+            &emsp;
+            <select
+              class="card-text"
+              name="location"
+              autocomplete="off"
+              required
+              style="width: 400px;"
+            >
+              <option value="" disabled selected>Select Location</option>
+              <option value="California">California</option>
+              <option value="Florida">Florida</option>
+              <option value="Illinois">Illinois</option>
+              <option value="New York">New York</option>
+              <option value="Texas">Texas</option>
+            </select>
+          </p>
+          <p>
+            <button class="card-text btn btn-primary" type="submit">
+              Submit
+            </button>
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include("partials/Footer.ejs") %>

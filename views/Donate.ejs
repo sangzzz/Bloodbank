@@ -1,0 +1,121 @@
+<%- include("partials/Header.ejs") %>
+
+<section id="login-register-title">
+  <div class="container-fluid login-register">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/">
+        <h1><i class="fas fa-tint"></i>Blood +</h1>
+      </a>
+    </nav>
+
+    <!-- Login form -->
+  </div>
+</section>
+
+<section>
+  <div
+    class="container-fluid login-register-form"
+    style="
+      background-color: #fff;
+      background-image: url(https://www.transparenttextures.com/patterns/ag-square.png);
+    "
+  >
+    <form action="/sponsor" method="POST">
+      <div
+        id="login-form"
+        class="card login-register-form"
+        style="width: 18rem;"
+      >
+        <div
+          class="card-body login-register-form container donate-style"
+          style="text-align: left;"
+        >
+          <h5
+            class="card-title"
+            style="text-align: center; padding-right: 15%;"
+          >
+            <u>SPONSOR FORM</u>
+          </h5>
+          <br />
+          <p>
+            <label class="profile-input-label card-text" for="name"
+              >Name :
+            </label>
+            &emsp;&emsp;
+            <input
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="login-input-profile card-text"
+              type="text"
+              placeholder="Enter text"
+              name="name"
+              required
+            />
+          </p>
+
+          <p>
+            <label class="profile-input-label card-text" for="email"
+              >Email :
+            </label>
+            &emsp;&emsp;
+            <input
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="login-input-profile card-text"
+              type="email"
+              placeholder="Enter text"
+              name="email"
+              required
+            />
+          </p>
+          <p>
+            <label class="profile-input-label card-text" for="amount"
+              >Amount : </label
+            >&emsp;&emsp13;
+            <input
+              autocomplete="off"
+              aria-autocomplete="none"
+              class="login-input-profile card-text"
+              type="number"
+              placeholder="Enter text"
+              name="amount"
+              required
+            />
+          </p>
+          <p>
+            <label class="profile-input-label card-text" for="country"
+              >Hospital :
+            </label>
+            &emsp;
+            <select
+              class="login-input-profile card-text"
+              name="hospital"
+              autocomplete="off"
+              required
+            >
+              <option value="" disabled selected>Select Location</option>
+              <option value="1">Princeton Hospital</option>
+              <option value="2">Florida Hospital</option>
+              <option value="3">Miami Hospital</option>
+              <option value="4">Manhattan Hospital</option>
+              <option value="5">Illinois Hospital</option>
+              <option value="6">California Hospital</option>
+              <option value="7">St.Petersburgh Hospital</option>
+              <option value="8">St.Joseph Hospital</option>
+              <option value="9">Nevada Hospital</option>
+              <option value="10">Iowa Hospital</option>
+            </select>
+          </p>
+          <p>
+            <button class="card-text btn btn-primary" type="submit">
+              Submit
+            </button>
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include("partials/Footer.ejs") %>

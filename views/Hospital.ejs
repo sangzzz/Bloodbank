@@ -1,0 +1,133 @@
+<%- include("partials/Header.ejs") %>
+<section id="login-register-title">
+  <div class="container-fluid">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/loggedin">
+        <h1><i class="fas fa-tint"></i><i>Blood +</i></h1>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" style="padding-right: 20px;">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          <% if (usertype === 'patient') { %>
+          <li class="nav-item" style="padding-right: 20px;">
+            <a class="nav-link" href="/hospitals">Hospitals</a>
+          </li>
+          <% } %> <% if (usertype === 'donor') { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/camps">Donation Camps</a>
+          </li>
+          <% } %> <% if (apply && isProfile && usertype === 'patient') { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/waitinglist">Waiting List</a>
+          </li>
+          <% } %>
+          <li class="nav-item">
+            <a class="nav-link" href="/sponsor">Sponsor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Login form -->
+  </div>
+</section>
+<% if (!isProfile) { %>
+<form action="/hospitals" method="post">
+  <div id="login-form" class="card login-register-form" style="width: 18rem;">
+    <div
+      class="card-body login-register-form container patient-profile"
+      style="text-align: left;"
+    >
+      <h5 class="card-title"><u>Set Up Patient Profile : Priority</u></h5>
+      <br />
+
+      <input type="radio" id="one" name="urgency" value="1" required />
+      <label
+        class="profile-input-label card-text"
+        style="font-size: 1.2rem; text-align: left; display: inline-block;"
+        for="one"
+        >Priority 1 : Crisis in dire need of blood. </label
+      ><br />
+      <input type="radio" id="two" name="urgency" value="2" />
+      <label
+        class="profile-input-label card-text"
+        style="font-size: 1.2rem; text-align: left; display: inline-block;"
+        for="two"
+        >Priority 2 : Condition Stable, but in need of transfusion.</label
+      ><br />
+      <input type="radio" id="three" name="urgency" value="3" />
+      <label
+        class="profile-input-label card-text"
+        style="font-size: 1.2rem; text-align: left; display: inline-block;"
+        for="three"
+        >Priority 3 : Can wait for some days.</label
+      >
+      <br /><br />
+      <p>
+        <button class="card-text btn btn-dark" type="submit">
+          Submit
+        </button>
+      </p>
+    </div>
+  </div>
+</form>
+<% } else { %>
+<section>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">HOSPITAL ID</th>
+        <th scope="col">HOSPITAL NAME</th>
+        <th scope="col">LOCATION</th>
+        <th scope="col">NUMBER OF PATIENTS</th>
+        <% if (!apply) { %>
+        <th scope="col">APPLY</th>
+        <% } %>
+      </tr>
+    </thead>
+    <tbody>
+      <% for( let i = 0; i < hospitals.length; i++ ) { %>
+      <tr>
+        <td><%= hospitals[i].HOSPITAL_ID %></td>
+        <td><%= hospitals[i].HOSPITAL_NAME %></td>
+        <td><%= hospitals[i].LOCATION %></td>
+        <td><%= hospitals[i].NUM_OF_PATIENTS %></td>
+        <% if (!apply) { %>
+        <td>
+          <form action="/hospitals" method="POST">
+            <input
+              type="hidden"
+              name="hosp_no"
+              value="<%- hospitals[i].HOSPITAL_ID %> "
+            />
+            <button class="btn btn-dark">
+              Apply
+            </button>
+          </form>
+        </td>
+        <% } %>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</section>
+<% } %> <%- include("partials/Footer.ejs") %>
